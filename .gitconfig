@@ -1,0 +1,18 @@
+[user]
+    name = Rishabh Rao
+    email = rishabhsrao@gmail.com
+
+[color]
+    ui = auto
+    pager = true
+
+[core]
+    # https://github.com/so-fancy/diff-so-fancy
+    pager = diff-so-fancy | less --tabs=4 -MRFXJ
+    excludesfile = /nail/home/rishabh/.gitignore
+
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
