@@ -15,3 +15,9 @@ if [[ $OSTYPE == *darwin* ]]; then
         path=($path "$N_PREFIX/bin")
     fi
 fi
+
+# Add npm_config_prefix to $PATH
+if [[ -d $(npm config get prefix) ]]; then
+    [[ "$XTRACE" == "verbose" ]] && printf "\nAdding $(npm config get prefix)/bin to path ..."
+    path=($path $(npm config get prefix)/bin)
+fi
