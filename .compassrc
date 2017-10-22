@@ -1,0 +1,23 @@
+# Compass configuration
+# See compass-style.org/help/documentation/configuration-reference
+
+require 'sass-css-importer'
+
+# Additional load paths for Sass CSS Importer gem
+add_import_path Sass::CssImporter::Importer.new('')
+
+# Application configuration
+environment = :development # One of :development, :production
+encoding = 'utf-8'
+http_path = '.'
+css_dir = ''
+sass_dir = ''
+images_dir = ''
+javascripts_dir = ''
+fonts_dir = ''
+output_style = :compressed # One of :nested, :expanded, :compact, or :compressed.
+relative_assets = true
+generated_images_path = ''
+additional_import_paths = ['']
+sourcemap = true
+sprite_engine = 'oily_png' # One of chunky_png, oily_png

@@ -1,0 +1,13 @@
+# .pairs - configuration for 'git pair'
+# https://github.com/pivotal/git_scripts#git-pair
+
+pairs:
+    # <initials>: <Firstname> <Lastname>[; <email-id>]
+    rishabh: Rishabh Rao; rishabhsrao
+
+email:
+    prefix:
+    domain: company.com
+    no_solo_prefix: true
+
+# global: true
