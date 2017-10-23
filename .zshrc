@@ -72,7 +72,7 @@ alias gl="git log --graph --pretty='%C(magenta)%h%Creset -%C(auto)%d%Creset %s %
 alias gds="gdca"
 alias gg="git grep --ignore-case --line-number"
 function gshow {
-    if [[ -z "$1" ]]; then
+    if [[ -n "$1" ]]; then
         git diff-tree --no-commit-id --name-only -r $1 && git show --patch $1
     fi
 }
@@ -94,7 +94,7 @@ alias tree="tree -CDAshpug"
 # https://coderwall.com/p/lzgryq/cat-with-syntax-highlighting
 # https://stackoverflow.com/questions/7522712/how-to-check-if-command-exists-in-a-shell-script
 function ccat {
-    if [[ -z "$@" ]]; then
+    if [[ -n "$@" ]]; then
         if type pygmentize > /dev/null; then
             cat --number $@ | pygmentize -O style=monokai -f console256 -g
         else
