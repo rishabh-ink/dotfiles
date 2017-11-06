@@ -40,6 +40,7 @@ if [[ -e $ZPLUG_HOME/init.zsh ]]; then
     zplug "rishabhsrao/iterm-tab-colors" # https://github.com/rishabhsrao/iterm-tab-colors
     zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme, \
         hook-load:" \
+            DEFAULT_USER=$USER; \
             POWERLEVEL9K_MODE='nerdfont-complete'; \
             POWERLEVEL9K_SHORTEN_DIR_LENGTH=3; \
             POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status context dir vcs); \
