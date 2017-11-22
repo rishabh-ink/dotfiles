@@ -104,6 +104,11 @@ function ccat {
     fi
 }
 
+# https://github.com/junegunn/fzf/wiki/examples#command-history
+fh() {
+  eval $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
+}
+
 # Work
 if [[ -e "$HOME/.zshrc_work" ]]; then
     [[ "$XTRACE" == "verbose" ]] && printf "\nRunning source $HOME/.zshrc_work ..."
