@@ -50,6 +50,7 @@ if [[ -e $ZPLUG_HOME/init.zsh ]]; then
     zplug "plugins/emoji-clock", from:oh-my-zsh # https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/emoji-clock/emoji-clock.plugin.zsh
     zplug "plugins/osx", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]" # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#osx
     zplug "plugins/z", from:oh-my-zsh # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/z
+    zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf # https://github.com/junegunn/fzf-bin
 
     zplug "zplug/zplug", hook-build:"zplug --self-manage"
 
