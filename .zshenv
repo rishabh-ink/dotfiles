@@ -2,6 +2,8 @@
 
 # http://zsh.sourceforge.net/Guide/zshguide02.html#l24
 typeset -U path
+typeset -U manpath
+typeset -U infopath
 
 if [[ $OSTYPE == *darwin* ]]; then
     # https://github.com/tj/n
@@ -18,6 +20,16 @@ if [[ $OSTYPE == *darwin* ]]; then
     # https://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html#_setting_up
     if [[ -d "$HOME/Applications/depot_tools" ]]; then
         path=($path "$HOME/Applications/depot_tools/bin")
+    fi
+fi
+
+if [[ $OSTYPE == *linux* ]]; then
+    # http://linuxbrew.sh/
+    if [[ -d "$HOME/.linuxbrew" ]]; then
+        path=($path "$HOME/.linuxbrew/bin")
+
+        manpath=($MANPATH "$(brew --prefix)/share/man")
+        infopath=($INFOPATH "$(brew --prefix)/share/info")
     fi
 fi
 
