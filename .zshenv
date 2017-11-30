@@ -34,7 +34,7 @@ if [[ $OSTYPE == *linux* ]]; then
 fi
 
 # Add npm_config_prefix to $PATH
-if [[ -d $(npm config get prefix) ]]; then
-    [[ "$XTRACE" == "verbose" ]] && printf "\nAdding $(npm config get prefix)/bin to path ..."
-    path=($PATH $(npm config get prefix)/bin)
+if [[ -d "$HOME/.npm-prefix" ]]; then
+    [[ "$XTRACE" == "verbose" ]] && printf "\nAdding $HOME/.npm-prefix/bin to path ..."
+    path=($PATH "$HOME/.npm-prefix"/bin)
 fi
