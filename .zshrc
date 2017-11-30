@@ -34,6 +34,7 @@ if [[ -e "$ANTIGEN_HOME/antigen.zsh" ]]; then
     antigen bundle https://github.com/robbyrussell/oh-my-zsh plugins/command-not-found
     antigen bundle https://github.com/zsh-users/zsh-syntax-highlighting zsh-syntax-highlighting.plugin.zsh
     antigen bundle https://github.com/rishabhsrao/iterm-tab-colors zsh-tab-colors.plugin.zsh
+    antigen bundle https://github.com/rupa/z z.sh
 
     # https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions#option-4-install-for-antigen
     DEFAULT_USER=$USER
