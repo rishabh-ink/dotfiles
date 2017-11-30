@@ -13,19 +13,6 @@ setopt appendhistory
 setopt sharehistory
 setopt incappendhistory
 
-# http://ohmyz.sh
-if [[ -z "$ZSH" ]]; then
-    [[ "$XTRACE" == "verbose" ]] && printf "\nRunning export ZSH=$HOME/.oh-my-zsh ..."
-    export ZSH="$HOME/.oh-my-zsh"
-fi
-
-if [[ -e $ZSH/oh-my-zsh.sh ]]; then
-    [[ "$XTRACE" == "verbose" ]] && printf "\nRunning source $HOME/.oh-my-zsh/oh-my-zsh.sh ..."
-    source "$HOME/.oh-my-zsh/oh-my-zsh.sh"
-else
-    printf "\nOops! http://ohmyz.sh not found"
-fi
-
 # antigen (https://github.com/zsh-users/antigen)
 if [[ -z "$ANTIGEN_HOME" ]]; then
     [[ "$XTRACE" == "verbose" ]] && printf "\nRunning export ANTIGEN_HOME=/usr/local/share/antigen ..."
@@ -36,7 +23,7 @@ if [[ -e "$ANTIGEN_HOME/antigen.zsh" ]]; then
     [[ "$XTRACE" == "verbose" ]] && printf "\nRunning source \$ANTIGEN_HOME/antigen.zsh ..."
     source "$ANTIGEN_HOME/antigen.zsh"
 
-    antigen use oh-my-zsh
+    antigen use oh-my-zsh # http://ohmyz.sh
 
     if [[ $OSTYPE == *darwin* ]]; then
         antigen bundle https://github.com/robbyrussell/oh-my-zsh plugins/osx
