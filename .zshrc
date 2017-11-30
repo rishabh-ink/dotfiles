@@ -26,44 +26,36 @@ else
     printf "\nOops! http://ohmyz.sh not found"
 fi
 
-# zplug (https://github.com/zplug/zplug)
-if [[ -z "$ZPLUG_HOME" ]]; then
-    [[ "$XTRACE" == "verbose" ]] && printf "\nRunning export ZPLUG_HOME=/usr/local/opt/zplug ..."
-    export ZPLUG_HOME="/usr/local/opt/zplug"
+# antigen (https://github.com/zsh-users/antigen)
+if [[ -z "$ANTIGEN_HOME" ]]; then
+    [[ "$XTRACE" == "verbose" ]] && printf "\nRunning export ANTIGEN_HOME=/usr/local/share/antigen ..."
+    export ANTIGEN_HOME="/usr/local/share/antigen"
 fi
 
-if [[ -e $ZPLUG_HOME/init.zsh ]]; then
-    [[ "$XTRACE" == "verbose" ]] && printf "\nRunning source $HOME/.oh-my-zsh/oh-my-zsh.sh ..."
-    source "$ZPLUG_HOME/init.zsh"
+if [[ -e "$ANTIGEN_HOME/antigen.zsh" ]]; then
+    [[ "$XTRACE" == "verbose" ]] && printf "\nRunning source \$ANTIGEN_HOME/antigen.zsh ..."
+    source "$ANTIGEN_HOME/antigen.zsh"
 
-    # zplug (https://github.com/zplug/zplug) list plugins
-    zplug "rishabhsrao/iterm-tab-colors" # https://github.com/rishabhsrao/iterm-tab-colors
-    zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme, \
-        hook-load:" \
-            DEFAULT_USER=$USER; \
-            POWERLEVEL9K_MODE='nerdfont-complete'; \
-            POWERLEVEL9K_SHORTEN_DIR_LENGTH=3; \
-            POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status context dir vcs); \
-            POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv node_version time) \
-        " # https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config#tunnckocore-configuration
-    zplug "plugins/git", from:oh-my-zsh # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git
-    zplug "plugins/emoji-clock", from:oh-my-zsh # https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/emoji-clock/emoji-clock.plugin.zsh
-    zplug "plugins/osx", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]" # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#osx
+    antigen use oh-my-zsh
 
-    zplug "zplug/zplug", hook-build:"zplug --self-manage"
-
-    # zplug (https://github.com/zplug/zplug) install plugins
-    if ! zplug check --verbose; then
-        printf "\nInstall? [y/N]: "
-            if read -q; then
-                zplug install
-            fi
+    if [[ $OSTYPE == *darwin* ]]; then
+        antigen bundle https://github.com/robbyrussell/oh-my-zsh plugins/osx
     fi
 
-    # zplug (https://github.com/zplug/zplug) load plugins
-    zplug load
-else
-    printf "\nOops! https://github.com/zplug/zplug not found"
+    antigen bundle https://github.com/robbyrussell/oh-my-zsh plugins/git
+    antigen bundle https://github.com/robbyrussell/oh-my-zsh plugins/emoji-clock
+    antigen bundle https://github.com/robbyrussell/oh-my-zsh plugins/command-not-found
+    antigen bundle https://github.com/zsh-users/zsh-syntax-highlighting zsh-syntax-highlighting.plugin.zsh
+
+    # https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions#option-4-install-for-antigen
+    DEFAULT_USER=$USER
+    POWERLEVEL9K_MODE='nerdfont-complete'
+    POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
+    POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status context dir vcs)
+    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv node_version time)
+    antigen theme https://github.com/bhilburn/powerlevel9k powerlevel9k.zsh-theme
+
+    antigen apply
 fi
 
 # Git aliases (override/add oh-my-zsh plugins/git)
