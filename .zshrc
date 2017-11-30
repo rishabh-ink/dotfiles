@@ -88,6 +88,11 @@ fh() {
   print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
 }
 
+# https://github.com/rbenv/rbenv
+if type rbenv > /dev/null; then
+    eval "$(rbenv init -)"
+fi
+
 # Work
 if [[ -e "$HOME/.zshrc_work" ]]; then
     [[ "$XTRACE" == "verbose" ]] && printf "\nRunning source $HOME/.zshrc_work ..."
