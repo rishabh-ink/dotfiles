@@ -101,11 +101,6 @@ fh() {
   print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
 }
 
-# https://rvm.io
-if [[ -d "$HOME/.rvm" ]]; then
-    source "$HOME/.rvm/scripts/rvm"
-fi
-
 # Work
 if [[ -e "$HOME/.zshrc_work" ]]; then
     [[ "$XTRACE" == "verbose" ]] && printf "\nRunning source $HOME/.zshrc_work ..."
