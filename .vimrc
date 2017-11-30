@@ -27,8 +27,8 @@ Plugin 'VundleVim/Vundle.vim'
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
-" https://github.com/vim-airline/vim-airline
-Plugin 'chriskempson/base16-vim' " (https://github.com/chriskempson/base16-vim)
+" Temporarily disabled pending https://github.com/chriskempson/base16-vim/issues/162
+" Plugin 'chriskempson/base16-vim' " (https://github.com/chriskempson/base16-vim)
 Plugin 'editorconfig/editorconfig-vim' " (https://github.com/editorconfig/editorconfig-vim)
 Plugin 'scrooloose/nerdtree' " (https://github.com/scrooloose/nerdtree)
 Plugin 'vim-airline/vim-airline' " (https://github.com/vim-airline/vim-airline)
