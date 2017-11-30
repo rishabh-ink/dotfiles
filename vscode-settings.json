@@ -1,0 +1,87 @@
+{
+    "editor.fontFamily": "mplus-1m-medium",
+    "editor.fontSize": 18,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "none",
+    "editor.rulers": [
+        79,
+        119
+    ],
+    "editor.smoothScrolling": true,
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.renderCharacters": false,
+    "editor.cursorBlinking": "phase",
+    "editor.fontLigatures": false,
+    "editor.renderWhitespace": "all",
+    "editor.dragAndDrop": false,
+    "editor.autoIndent": false,
+    "editor.wordWrap": "off",
+    "window.title": "${dirty} ${activeEditorLong}",
+    "window.zoomLevel": -1,
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorCustomizations": {
+        "tab.activeBorder": "#d831b0"
+    },
+    "projectManager.sortList": "Recent",
+    "projectManager.git.maxDepthRecursion": 2,
+    "projectManager.git.baseFolders": [
+        "$home/Projects",
+        "$home/Playground_dev7",
+        "$home/Playground_xenialdev1"
+    ],
+    "projectManager.checkInvalidPathsBeforeListing": false,
+    "explorer.openEditors.visible": 0,
+    "typescript.npm": "/Users/rishabh/n/bin/npm",
+    "javascript.validate.enable": false,
+    "gitlens.codeLens.locations": [],
+    "gitlens.codeLens.perLanguageLocations": [],
+    "gitlens.statusBar.format": "${author} • ${id} • ${message} • ${ago}",
+    "eslint.nodePath": "./node_modules",
+    "eslint.options": {
+        "configFile": "./node_modules/yelp-js-infra/config/eslint/index.js"
+    },
+    "importCost.smallPackageColor": "rgba(65,167,0,.2)",
+    "importCost.mediumPackageColor": "rgba(254,221,48,.5)",
+    "importCost.largePackageColor": "rgba(241,92,79,.5)",
+    "files.trimTrailingWhitespace": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/node_modules": true,
+        "**/.eggs": true,
+        "**/.tox": true,
+        "**/*.egg-info": true,
+        "**/build": true,
+        "**/dist": true,
+        "**/venv*": true,
+        "**/templates/*.py": true
+    },
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "/usr/local/bin/flake8",
+    "[markdown]": {
+        "editor.wordWrap": "off"
+    },
+    "sublimeTextKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "editor.formatOnPaste": true,
+    "eslint.packageManager": "yarn",
+    "flow.useNPMPackagedFlow": true,
+    "python.formatting.autopep8Path": "/usr/local/bin/autopep8",
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    }
+}
