@@ -42,7 +42,7 @@ filetype plugin indent on    " required
 
 " Additional plugin configuration
 syntax on
-colorscheme base16-tomorrow-night
+" colorscheme base16-tomorrow-night
 set noshowmode " (https://github.com/vim-airline/vim-airline/wiki/FAQ#how-do-i-get-rid-of-the-default-mode-indicator)
 set laststatus=2 " (https://github.com/vim-airline/vim-airline/wiki/FAQ#vim-airline-doesnt-appear-until-i-create-a-new-split)
 let g:airline_theme='tomorrow'
