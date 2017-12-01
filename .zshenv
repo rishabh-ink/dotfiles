@@ -16,11 +16,6 @@ if [[ $OSTYPE == *darwin* ]]; then
         [[ "$XTRACE" == "verbose" ]] && printf "\nAdding $N_PREFIX/bin to path ..."
         path=("$N_PREFIX/bin" $path)
     fi
-
-    # https://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html#_setting_up
-    if [[ -d "$HOME/Applications/depot_tools" ]]; then
-        path=("$HOME/Applications/depot_tools/bin" $path)
-    fi
 fi
 
 if [[ $OSTYPE == *linux* ]]; then
@@ -31,6 +26,11 @@ if [[ $OSTYPE == *linux* ]]; then
         manpath=("$(brew --prefix)/share/man" $manpath)
         infopath=("$(brew --prefix)/share/info" $infopath)
     fi
+fi
+
+# https://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html#_setting_up
+if [[ -d "$HOME/Applications/depot_tools" ]]; then
+    path=("$HOME/Applications/depot_tools/bin" $path)
 fi
 
 # Add npm_config_prefix to the path
