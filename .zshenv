@@ -33,6 +33,11 @@ if [[ -d "$HOME/Applications/depot_tools" ]]; then
     path=("$HOME/Applications/depot_tools/bin" $path)
 fi
 
+# Add $HOME/bin to the path
+if [[ -d "$HOME/bin" ]]; then
+    path=("$HOME/bin" $path)
+fi
+
 # Add npm_config_prefix to the path
 if [[ -d "$HOME/.npm-prefix" ]]; then
     [[ "$XTRACE" == "verbose" ]] && printf "\nAdding $HOME/.npm-prefix/bin to path ..."
