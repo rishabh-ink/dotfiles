@@ -40,9 +40,10 @@ filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 
-" Additional plugin configuration
+" Additional configuration
 syntax on
 " colorscheme base16-tomorrow-night
+set number
 set noshowmode " (https://github.com/vim-airline/vim-airline/wiki/FAQ#how-do-i-get-rid-of-the-default-mode-indicator)
 set laststatus=2 " (https://github.com/vim-airline/vim-airline/wiki/FAQ#vim-airline-doesnt-appear-until-i-create-a-new-split)
 let g:airline_theme='tomorrow'
