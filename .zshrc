@@ -63,6 +63,7 @@ function gshow {
 if type trash > /dev/null; then
         alias rm="trash"
     else
+        print "Install trash-cli (https://github.com/sindresorhus/trash-cli) for an improved experience"
         alias rm="rm -i"
 fi
 
@@ -79,7 +80,8 @@ function ccat {
         if type pygmentize > /dev/null; then
             cat --number $@ | pygmentize -O style=monokai -f console256 -g
         else
-            print "Oops! http://pygments.org/docs/cmdline not found"
+            print "Install Pygments (http://pygments.org/) for an improved experience"
+            cat --number $@
         fi
     fi
 }
