@@ -96,6 +96,11 @@ if type rbenv > /dev/null; then
     eval "$(rbenv init -)"
 fi
 
+# https://the.exa.website
+if type exa > /dev/null; then
+    alias ll="exa --all --blocks --extended --git --group --group-directories-first --header --inode --links --long"
+fi
+
 # Work
 if [[ -e "$HOME/.zshrc_work" ]]; then
     [[ "$XTRACE" == "verbose" ]] && printf "\nRunning source $HOME/.zshrc_work ..."
