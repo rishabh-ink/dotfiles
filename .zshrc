@@ -74,17 +74,11 @@ alias grep="grep --line-number --color"
 alias tree="tree -CDAshpug"
 
 # https://coderwall.com/p/lzgryq/cat-with-syntax-highlighting
-# https://stackoverflow.com/questions/7522712/how-to-check-if-command-exists-in-a-shell-script
-function ccat {
-    if [[ -n "$@" ]]; then
-        if type pygmentize > /dev/null; then
-            cat --number $@ | pygmentize -O style=monokai -f console256 -g
-        else
-            print "Install Pygments (http://pygments.org/) for an improved experience"
-            cat --number $@
-        fi
-    fi
-}
+if type pygmentize > /dev/null; then
+        alias ccat="pygmentize -f terminal256 -g"
+    else
+        alias ccat="cat --number $@"
+fi
 
 # https://github.com/junegunn/fzf
 if [[ -d "$HOME/lib/fzf" ]]; then
