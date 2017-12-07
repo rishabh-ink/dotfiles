@@ -86,10 +86,11 @@ function ccat {
     fi
 }
 
-# https://github.com/junegunn/fzf/wiki/examples#command-history
-fh() {
-  print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
-}
+# https://github.com/junegunn/fzf
+if [[ -d "$HOME/lib/fzf" ]]; then
+    source "$HOME/lib/fzf/shell/completion.zsh"
+    source "$HOME/lib/fzf/shell/key-bindings.zsh"
+fi
 
 # https://github.com/rbenv/rbenv
 if type rbenv > /dev/null; then
