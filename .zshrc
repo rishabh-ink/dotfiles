@@ -110,7 +110,8 @@ fi
 
 # https://the.exa.website
 if type exa > /dev/null; then
-    alias ll="exa --all --blocks --git --group --group-directories-first --header --inode --links --long"
+    alias la="exa --all --blocks --git --group --group-directories-first --header --inode --links --long"
+    alias ll="la"
 fi
 
 # Work
