@@ -49,13 +49,30 @@ fi
 
 # Git aliases (override/add oh-my-zsh plugins/git)
 alias gs="gsb"
-alias gl="git log --graph --pretty='%C(magenta)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --all"
 alias gds="gdca"
 alias gg="git grep --ignore-case --line-number"
-function gshow {
-    if [[ -n "$1" ]]; then
-        git diff-tree --no-commit-id --name-only -r $1 && git show --patch $1
-    fi
+unalias gl # Unalias oh-my-zsh's plugins/git's gl alias
+function gl() {
+    # https://junegunn.kr/2015/03/browsing-git-commits-with-fzf/
+    # https://gist.github.com/junegunn/f4fca918e937e6bf5bad
+    # https://gist.github.com/akatrevorjay/9fc061e8371529c4007689a696d33c62
+    # https://asciinema.org/a/101366
+    git log \
+    --abbrev-commit \
+    --all \
+    --color=always \
+    --date=iso8601 \
+    --graph \
+    --pretty='%C(cyan)%h %C(red)%d %C(blue)%s %C(white)on %C(magenta)%cd %C(white)by %C(yellow)%ce%Creset' \
+    "$@" | \
+
+    fzf \
+    --ansi \
+    --reverse \
+    --tiebreak=index \
+    --no-sort \
+    --bind=ctrl-s:toggle-sort \
+    --preview 'f() { set -- $(echo -- "$@" | grep -o "[a-f0-9]\{7\}"); [ $# -eq 0 ] || git show --color=always $1; }; f {}'
 }
 
 # https://github.com/sindresorhus/guides/blob/master/how-not-to-rm-yourself.md
