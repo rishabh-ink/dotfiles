@@ -68,6 +68,7 @@ function gl() {
 
     fzf \
     --ansi \
+    --no-mouse \
     --reverse \
     --tiebreak=index \
     --no-sort \
