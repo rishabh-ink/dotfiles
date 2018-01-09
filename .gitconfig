@@ -17,7 +17,3 @@
     newNormal = green bold
     newHighlight = green bold 22
 
-[tig]
-    main-view-id-display = true
-    main-view-id-width = 20
-
