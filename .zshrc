@@ -72,7 +72,7 @@ function gl() {
     --tiebreak=index \
     --no-sort \
     --bind=ctrl-s:toggle-sort \
-    --preview 'f() { set -- $(echo -- "$@" | grep -o "[a-f0-9]\{7\}"); [ $# -eq 0 ] || git show --color=always $1; }; f {}'
+    # --preview 'f() { set -- $(echo -- "$@" | grep -o "[a-f0-9]\{7\}"); [ $# -eq 0 ] || git show --color=always $1; }; f {}'
 }
 
 # https://github.com/sindresorhus/guides/blob/master/how-not-to-rm-yourself.md
