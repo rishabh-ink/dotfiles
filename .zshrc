@@ -78,12 +78,12 @@ function gl() {
 
 # https://github.com/sindresorhus/guides/blob/master/how-not-to-rm-yourself.md
 # https://github.com/sindresorhus/trash-cli
-if type trash > /dev/null; then
-        alias rm="trash"
-    else
-        print "Install trash-cli (https://github.com/sindresorhus/trash-cli) for an improved experience"
-        alias rm="rm -i"
-fi
+# if type trash > /dev/null; then
+#         alias rm="trash"
+#     else
+#         print "Install trash-cli (https://github.com/sindresorhus/trash-cli) for an improved experience"
+#         alias rm="rm -i"
+# fi
 
 # Pretty grep (https://www.gnu.org/software/grep/manual/grep.html)
 alias grep="grep --line-number --color"
