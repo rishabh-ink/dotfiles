@@ -8,7 +8,7 @@
 
 [core]
     # https://github.com/so-fancy/diff-so-fancy
-    pager = diff-so-fancy | less --tabs=4 -MRFXJ
+    pager = diff-so-fancy | less --tabs=4 --quit-if-one-screen --RAW-CONTROL-CHARS --no-init
 	excludesfile = ~/.gitignore
 
 [color "diff-highlight"]
