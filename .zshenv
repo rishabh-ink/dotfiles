@@ -30,7 +30,7 @@ fi
 
 # https://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html#_setting_up
 if [[ -d "$HOME/lib/depot_tools" ]]; then
-    path=("$HOME/lib/depot_tools/bin" $path)
+    path=("$HOME/lib/depot_tools" $path)
 fi
 
 # Add $HOME/bin to the path
