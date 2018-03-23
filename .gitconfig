@@ -26,4 +26,4 @@
     whitespace = red reverse
 
 [diff-so-fancy]
-	stripLeadingSymbols = false
+	stripLeadingSymbols = true
