@@ -8,24 +8,28 @@
     "editor.dragAndDrop": false,
     "editor.fontFamily": "mplus-1m-medium",
     "editor.fontLigatures": false,
-    "editor.fontSize": 18,
+    "editor.fontSize": 16,
     "editor.minimap.renderCharacters": false,
     "editor.minimap.showSlider": "always",
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderWhitespace": "all",
     "editor.rulers": [
-        120,
-        130,
-        80
+        119,
+        129,
+        79
     ],
     "editor.smoothScrolling": true,
     "editor.snippetSuggestions": "top",
     "editor.wordWrap": "off",
     "eslint.nodePath": "./node_modules",
     "eslint.options": {
-        "configFile": "./node_modules/yelp-js-infra/config/eslint/index.js"
+        "configFile": ".eslintrc.js"
+        // "configFile": ".eslintrc.json"
+        // "configFile": "./node_modules/yelp-js-infra/config/eslint/index.js"
     },
     "eslint.packageManager": "yarn",
+    "eslint.alwaysShowStatus": true,
+    "eslint.provideLintTask": true,
     "explorer.confirmDelete": false,
     "explorer.openEditors.visible": 0,
     "files.exclude": {
@@ -55,6 +59,8 @@
         "suppressGitVersionWarning": false,
         "suppressLineUncommittedWarning": false,
         "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true,
         "suppressUpdateNotice": false,
         "suppressWelcomeNotice": true
     },
@@ -99,17 +105,32 @@
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Path": "/usr/local/bin/flake8",
     "python.linting.pylintEnabled": false,
-    "sublimeTextKeymap.promptV3Features": true,
     "typescript.npm": "/Users/rishabh/n/bin/npm",
     "window.title": "${dirty} ${activeEditorLong}",
     "window.zoomLevel": 0,
     "workbench.activityBar.visible": false,
     "workbench.colorCustomizations": {
-        "tab.activeBorder": "#d831b0"
+        "activityBarBadge.background": "#5C6BC0",
+        "list.activeSelectionForeground": "#5C6BC0",
+        "list.inactiveSelectionForeground": "#5C6BC0",
+        "list.highlightForeground": "#5C6BC0",
+        "scrollbarSlider.activeBackground": "#5C6BC050",
+        "editorSuggestWidget.highlightForeground": "#5C6BC0",
+        "textLink.foreground": "#5C6BC0",
+        "progressBar.background": "#5C6BC0",
+        "pickerGroup.foreground": "#5C6BC0",
+        "tab.activeBorder": "#5C6BC0",
+        "notificationLink.foreground": "#5C6BC0"
     },
-    "workbench.colorTheme": "One Dark Pro Vivid",
+    "workbench.colorTheme": "Material Theme Palenight High Contrast",
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.startupEditor": "none"
+    "workbench.iconTheme": "eq-material-theme-icons",
+    "workbench.startupEditor": "none",
+    "materialTheme.cache.workbench.settings": {
+        "accent": "Indigo",
+        "accentPrevious": "Orange"
+    },
+    "explorer.confirmDragAndDrop": false,
+    "gitlens.historyExplorer.enabled": true
 }
