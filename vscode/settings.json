@@ -6,26 +6,30 @@
     "editor.cursorBlinking": "phase",
     "editor.cursorWidth": 3,
     "editor.dragAndDrop": false,
-    "editor.fontFamily": "mplus-1m-medium",
-    "editor.fontLigatures": false,
+    // "editor.fontFamily": "mplus-1m-medium",
+    // "editor.fontFamily": "monaco",
+    // "editor.fontFamily": "FixedsysExcelsiorIIIb",
+    "editor.fontFamily": "Iosevka-SS07-Bold",
+    // "editor.fontFamily": "IBMPlexMono-Italic",
+    // "terminal.integrated.fontFamily": "mplusNerdFontCM-medium",
+    "terminal.integrated.fontFamily": "IosevkaNerdFontCompleteM-",
+    "terminal.integrated.fontSize": 14,
     "editor.fontSize": 16,
     "editor.minimap.renderCharacters": false,
     "editor.minimap.showSlider": "always",
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderWhitespace": "all",
     "editor.rulers": [
-        119,
-        129,
-        79
+        120,
     ],
     "editor.smoothScrolling": true,
     "editor.snippetSuggestions": "top",
     "editor.wordWrap": "off",
     "eslint.nodePath": "./node_modules",
     "eslint.options": {
-        "configFile": ".eslintrc.js"
+        // "configFile": ".eslintrc.js"
         // "configFile": ".eslintrc.json"
-        // "configFile": "./node_modules/yelp-js-infra/config/eslint/index.js"
+        "configFile": "./node_modules/yelp-js-infra/config/eslint/index.js"
     },
     "eslint.packageManager": "yarn",
     "eslint.alwaysShowStatus": true,
@@ -64,8 +68,6 @@
         "suppressUpdateNotice": false,
         "suppressWelcomeNotice": true
     },
-    "gitlens.blame.highlight.enabled": false,
-    "gitlens.codeLens.enabled": false,
     "gitlens.codeLens.scopes": [
         "blocks",
         "containers",
@@ -75,8 +77,6 @@
     "gitlens.statusBar.format": "${author} • ${id} • ${message} • ${ago}",
     "javascript.validate.enable": false,
     "prettier.eslintIntegration": true,
-    "projectManager.cacheProjectsBetweenSessions": false,
-    "projectManager.checkInvalidPathsBeforeListing": false,
     "projectManager.git.baseFolders": [
         "$home/Playground_dev7",
         "$home/Playground_dev7/devs/rishabh",
@@ -96,19 +96,27 @@
         "$home/Playground_xenialdev1/node_packages",
         "$home/Playground_xenialdev1/python_packages",
         "$home/Playground_xenialdev1/services",
-        "$home/Projects"
+        "$home/Projects",
+        "$home/pg"
     ],
     "projectManager.git.maxDepthRecursion": 1,
     "projectManager.groupList": true,
     "projectManager.sortList": "Recent",
     "python.formatting.autopep8Path": "/usr/local/bin/autopep8",
-    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Enabled": false,
     "python.linting.flake8Path": "/usr/local/bin/flake8",
     "python.linting.pylintEnabled": false,
     "typescript.npm": "/Users/rishabh/n/bin/npm",
     "window.title": "${dirty} ${activeEditorLong}",
     "window.zoomLevel": 0,
     "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "Material Theme Palenight High Contrast",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.iconTheme": "eq-material-theme-icons-palenight",
+    "workbench.startupEditor": "none",
+    "explorer.confirmDragAndDrop": false,
+    "gitlens.historyExplorer.enabled": true,
     "workbench.colorCustomizations": {
         "activityBarBadge.background": "#5C6BC0",
         "list.activeSelectionForeground": "#5C6BC0",
@@ -120,17 +128,19 @@
         "progressBar.background": "#5C6BC0",
         "pickerGroup.foreground": "#5C6BC0",
         "tab.activeBorder": "#5C6BC0",
-        "notificationLink.foreground": "#5C6BC0"
+        "notificationLink.foreground": "#5C6BC0",
+        "editor.findWidgetResizeBorder": "#5C6BC0",
+        "editorWidget.border": "#5C6BC0"
     },
-    "workbench.colorTheme": "Material Theme Palenight High Contrast",
-    "workbench.editor.enablePreview": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.iconTheme": "eq-material-theme-icons",
-    "workbench.startupEditor": "none",
-    "materialTheme.cache.workbench.settings": {
-        "accent": "Indigo",
-        "accentPrevious": "Orange"
-    },
-    "explorer.confirmDragAndDrop": false,
-    "gitlens.historyExplorer.enabled": true
+    "materialTheme.accentPrevious": "",
+    "materialTheme.accent": "Indigo",
+    "materialTheme.fixIconsRunning": false,
+    "sourcegraph.url": "https://sourcegraph.yelpcorp.com",
+    "gitlens.codeLens.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.currentLine.enabled": false,
+    "gitlens.settings.mode": "advanced",
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "editor.accessibilitySupport": "off",
+    "zenMode.centerLayout": false
 }
