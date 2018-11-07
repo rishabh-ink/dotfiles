@@ -38,6 +38,7 @@ if [[ -e "$ANTIGEN_HOME/antigen.zsh" ]]; then
 
     # https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions#option-4-install-for-antigen
     DEFAULT_USER=$USER
+    POWERLEVEL9K_ALWAYS_SHOW_USER=false
     POWERLEVEL9K_MODE='nerdfont-complete'
     POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
     POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status context dir vcs)
