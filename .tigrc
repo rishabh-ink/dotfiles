@@ -1,3 +1,4 @@
 set main-view-id = yes
 set main-view-id-width = 8
+set main-options = --max-count=1000
 
