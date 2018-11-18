@@ -23,6 +23,10 @@ if [[ -e "$ANTIGEN_HOME/antigen.zsh" ]]; then
     [[ "$XTRACE" == "verbose" ]] && printf "\nRunning source \$ANTIGEN_HOME/antigen.zsh ..."
     source "$ANTIGEN_HOME/antigen.zsh"
 
+    # Enable antigen logging
+    # https://github.com/zsh-users/antigen/wiki/Configuration#general
+    # ANTIGEN_LOG=$ANTIGEN_HOME/antigen.log
+
     antigen use oh-my-zsh # http://ohmyz.sh
 
     if [[ $OSTYPE == *darwin* ]]; then
