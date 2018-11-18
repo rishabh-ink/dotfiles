@@ -40,6 +40,9 @@ if [[ -e "$ANTIGEN_HOME/antigen.zsh" ]]; then
     DEFAULT_USER=$USER
     POWERLEVEL9K_ALWAYS_SHOW_USER=false
     POWERLEVEL9K_MODE="nerdfont-complete"
+    POWERLEVEL9K_SHORTEN_DELIMITER="…"
+    POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
+    POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
     POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status time context virtualenv node_version dir vcs newline)
     POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
     antigen theme https://github.com/bhilburn/powerlevel9k powerlevel9k.zsh-theme
