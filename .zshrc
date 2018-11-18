@@ -36,7 +36,6 @@ if [[ -e "$ANTIGEN_HOME/antigen.zsh" ]]; then
     antigen bundle https://github.com/rishabhsrao/iterm-tab-colors zsh-tab-colors.plugin.zsh
     antigen bundle https://github.com/rupa/z z.sh
 
-    # https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions#option-4-install-for-antigen
     DEFAULT_USER=$USER
     POWERLEVEL9K_ALWAYS_SHOW_USER=false
     POWERLEVEL9K_MODE="nerdfont-complete"
@@ -45,7 +44,10 @@ if [[ -e "$ANTIGEN_HOME/antigen.zsh" ]]; then
     POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
     POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status time context virtualenv node_version dir vcs newline)
     POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
-    antigen theme https://github.com/bhilburn/powerlevel9k powerlevel9k.zsh-theme
+
+    # https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions#option-4-install-for-antigen
+    POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
+    antigen theme bhilburn/powerlevel9k powerlevel9k
 
     antigen apply
 fi
