@@ -39,7 +39,7 @@ if [[ -e "$ANTIGEN_HOME/antigen.zsh" ]]; then
     # https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions#option-4-install-for-antigen
     DEFAULT_USER=$USER
     POWERLEVEL9K_ALWAYS_SHOW_USER=false
-    POWERLEVEL9K_MODE='nerdfont-complete'
+    POWERLEVEL9K_MODE="nerdfont-complete"
     POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status time context virtualenv node_version dir vcs newline)
     POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
     antigen theme https://github.com/bhilburn/powerlevel9k powerlevel9k.zsh-theme
@@ -54,7 +54,7 @@ alias gg="git grep --ignore-case --line-number"
 if type tig > /dev/null; then
         alias gl="tig --all"
     else
-        unalias gl # Unalias oh-my-zsh's plugins/git's gl alias
+        unalias gl # Unalias oh-my-zsh’s plugins/git’s gl alias
         function gl() {
             # https://junegunn.kr/2015/03/browsing-git-commits-with-fzf/
             # https://gist.github.com/junegunn/f4fca918e937e6bf5bad
