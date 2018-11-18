@@ -33,7 +33,7 @@ if [[ -e "$ANTIGEN_HOME/antigen.zsh" ]]; then
     antigen bundle https://github.com/robbyrussell/oh-my-zsh plugins/emoji-clock
     antigen bundle https://github.com/robbyrussell/oh-my-zsh plugins/command-not-found
     antigen bundle https://github.com/zsh-users/zsh-syntax-highlighting zsh-syntax-highlighting.plugin.zsh
-    antigen bundle https://github.com/rishabhsrao/iterm-tab-colors zsh-tab-colors.plugin.zsh
+    antigen bundle https://github.com/tysonwolker/iterm-tab-colors zsh-tab-colors.plugin.zsh
     antigen bundle https://github.com/rupa/z z.sh
 
     DEFAULT_USER=$USER
