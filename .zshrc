@@ -51,7 +51,7 @@ if [[ -e "$ANTIGEN_HOME/antigen.zsh" ]]; then
 
     # https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions#option-4-install-for-antigen
     POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
-    antigen theme bhilburn/powerlevel9k powerlevel9k
+    antigen theme bhilburn/powerlevel9k@v0.6.6 powerlevel9k
 
     antigen apply
 fi
