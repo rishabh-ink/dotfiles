@@ -142,5 +142,7 @@
     "gitlens.settings.mode": "advanced",
     "javascript.updateImportsOnFileMove.enabled": "never",
     "editor.accessibilitySupport": "off",
-    "zenMode.centerLayout": false
+    "zenMode.centerLayout": false,
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.lineHistory.enabled": true
 }
