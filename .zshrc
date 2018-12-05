@@ -46,8 +46,8 @@ if [[ -e "$ANTIGEN_HOME/antigen.zsh" ]]; then
     POWERLEVEL9K_SHORTEN_DELIMITER="…"
     POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
     POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
-    POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status time context virtualenv node_version dir vcs newline)
-    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+    POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status time dir vcs newline)
+    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(context virtualenv node_version)
 
     # https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions#option-4-install-for-antigen
     POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
