@@ -43,7 +43,7 @@ if [[ -e "$ANTIGEN_HOME/antigen.zsh" ]]; then
     DEFAULT_USER=$USER
     POWERLEVEL9K_ALWAYS_SHOW_USER=false
     POWERLEVEL9K_MODE="nerdfont-complete"
-    POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status time date context virtualenv node_version dir vcs newline)
+    POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status date time context virtualenv node_version dir vcs newline)
     POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 
     # https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions#option-4-install-for-antigen
