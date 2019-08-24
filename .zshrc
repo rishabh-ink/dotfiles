@@ -129,6 +129,11 @@ if type exa > /dev/null; then
     alias ll="la"
 fi
 
+# https://travis-ci.com
+if [[ -e "$HOME/.travis/travis.sh" ]]; then
+    source $HOME/.travis/travis.sh
+fi
+
 # Work
 if [[ -e "$HOME/.zshrc_work" ]]; then
     [[ "$XTRACE" == "verbose" ]] && printf "\nRunning source $HOME/.zshrc_work ..."
