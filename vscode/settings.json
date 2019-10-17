@@ -6,7 +6,7 @@
     "editor.cursorBlinking": "phase",
     "editor.cursorWidth": 3,
     "editor.dragAndDrop": false,
-    // "editor.fontFamily": "mplus-1m-medium",
+    // "editor.fontFamily": "mplusNerdFontCompleteM-regular",
     // "editor.fontFamily": "monaco",
     // "editor.fontFamily": "FixedsysExcelsiorIIIb",
     "editor.fontFamily": "Iosevka-Medium",
@@ -121,5 +121,8 @@
     "editor.accessibilitySupport": "off",
     "zenMode.centerLayout": false,
     "gitlens.views.fileHistory.enabled": true,
-    "gitlens.views.lineHistory.enabled": true
+    "gitlens.views.lineHistory.enabled": true,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
