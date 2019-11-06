@@ -1,7 +1,12 @@
 if [ "$TERM" != "screen" ]
 then
-    if type tmux2 >/dev/null 2>&1
+    if type agenttmux2 >/dev/null 2>&1
     then
-        tmux2 -CC attach || tmux2 -CC new
+        agenttmux2 -CC attach || agenttmux2 -CC new
+    else
+        if type tmux2 >/dev/null 2>&1
+        then
+            tmux2 -CC attach || tmux2 -CC new
+        fi
     fi
 fi
