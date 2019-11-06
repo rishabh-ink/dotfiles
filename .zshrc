@@ -42,6 +42,7 @@ if [[ -e "$ANTIGEN_HOME/antigen.zsh" ]]; then
     antigen bundle https://github.com/zsh-users/zsh-syntax-highlighting zsh-syntax-highlighting.plugin.zsh
     antigen bundle https://github.com/tysonwolker/iterm-tab-colors zsh-tab-colors.plugin.zsh
     antigen bundle https://github.com/rupa/z z.sh
+    antigen bundle https://github.com/zsh-users/zsh-autosuggestions zsh-autosuggestions.plugin.zsh
 
     DEFAULT_USER=$USER
     POWERLEVEL9K_ALWAYS_SHOW_USER=false
