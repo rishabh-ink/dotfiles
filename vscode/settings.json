@@ -38,7 +38,7 @@
         "**/*.pyc": true,
         "**/.DS_Store": true,
         "**/.eggs": true,
-        "**/.git": true,
+        "**/.git": false,
         "**/.hg": true,
         "**/.svn": true,
         "**/.tox": true,
