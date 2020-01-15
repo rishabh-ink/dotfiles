@@ -2,7 +2,7 @@
     "[markdown]": {
         "editor.wordWrap": "off"
     },
-    "editor.autoIndent": false,
+    "editor.autoIndent": "none",
     "editor.cursorBlinking": "phase",
     "editor.cursorWidth": 3,
     "editor.dragAndDrop": false,
@@ -22,16 +22,8 @@
     "editor.smoothScrolling": true,
     "editor.snippetSuggestions": "top",
     "editor.wordWrap": "off",
-    "eslint.nodePath": "./node_modules",
-    "eslint.options": {
-        // "configFile": ".eslintrc.js"
-        // "configFile": ".eslintrc.json"
-        "configFile": "./node_modules/yelp-js-infra/config/eslint/index.js"
-    },
     "eslint.packageManager": "yarn",
     "eslint.alwaysShowStatus": true,
-    "eslint.provideLintTask": true,
-    "explorer.confirmDelete": false,
     "explorer.openEditors.visible": 0,
     "files.exclude": {
         "**/*.egg-info": true,
@@ -46,7 +38,7 @@
         "**/build": true,
         "**/CVS": true,
         "**/dist": false,
-        "**/node_modules": true,
+        "**/node_modules": false,
         "**/templates/*.py": true,
         "**/venv*": true,
         "**/virtualenv_run": true
@@ -73,38 +65,10 @@
     "gitlens.keymap": "alternate",
     "gitlens.statusBar.format": "${author} • ${id} • ${message} • ${ago}",
     "javascript.validate.enable": false,
-    "prettier.eslintIntegration": true,
-    "projectManager.git.baseFolders": [
-        "$home/Playground_dev7",
-        "$home/Playground_dev7/devs/rishabh",
-        "$home/Playground_dev7/devtools",
-        "$home/Playground_dev7/github/Yelp",
-        "$home/Playground_dev7/github/Yelp",
-        "$home/Playground_dev7/hackathon",
-        "$home/Playground_dev7/js_infra",
-        "$home/Playground_dev7/js_packages",
-        "$home/Playground_dev7/node_packages",
-        "$home/Playground_dev7/python_packages",
-        "$home/Playground_dev7/services",
-        "$home/Playground_dev7/splunk",
-        "$home/Playground_xenialdev1",
-        "$home/Playground_xenialdev1/devs/rishabh",
-        "$home/Playground_xenialdev1/js_infra",
-        "$home/Playground_xenialdev1/js_packages",
-        "$home/Playground_xenialdev1/node_packages",
-        "$home/Playground_xenialdev1/python_packages",
-        "$home/Playground_xenialdev1/services",
-        "$home/Projects",
-        "$home/pg"
-    ],
-    "projectManager.git.maxDepthRecursion": 1,
-    "projectManager.groupList": true,
-    "projectManager.sortList": "Recent",
     "python.formatting.autopep8Path": "/usr/local/bin/autopep8",
     "python.linting.flake8Enabled": false,
     "python.linting.flake8Path": "/usr/local/bin/flake8",
     "python.linting.pylintEnabled": false,
-    "typescript.npm": "/Users/rishabh/n/bin/npm",
     "window.title": "${dirty} ${activeEditorLong}",
     "window.zoomLevel": 0,
     "workbench.activityBar.visible": false,
@@ -122,7 +86,4 @@
     "zenMode.centerLayout": false,
     "gitlens.views.fileHistory.enabled": true,
     "gitlens.views.lineHistory.enabled": true,
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
 }
