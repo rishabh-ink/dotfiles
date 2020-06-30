@@ -90,9 +90,8 @@ if [[ -e "$ANTIGEN_HOME/antigen.zsh" ]]; then
     POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_BACKGROUND="black"
     POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_FOREGROUND="red"
 
-    # https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions#option-4-install-for-antigen
-    POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
-    antigen theme bhilburn/powerlevel9k powerlevel9k
+    # https://github.com/romkatv/powerlevel10k#antigen
+    antigen theme romkatv/powerlevel10k
 
     antigen apply
 fi
