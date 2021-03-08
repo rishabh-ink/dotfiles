@@ -7,6 +7,11 @@ then
         if type tmux2 >/dev/null 2>&1
         then
             tmux2 -CC attach || tmux2 -CC new
+        else
+            if type tmux >/dev/null 2>&1
+            then
+                tmux -CC attach || tmux -CC new
+            fi
         fi
     fi
 fi
