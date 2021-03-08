@@ -182,3 +182,4 @@ fi
 # References
 # http://zsh.sourceforge.net/Doc/Release/Conditional-Expressions.html
 # https://robots.thoughtbot.com/the-unix-shells-humble-if
+test -e /Users/rishabh/.iterm2_shell_integration.zsh && source /Users/rishabh/.iterm2_shell_integration.zsh || true
