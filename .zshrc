@@ -17,7 +17,7 @@ setopt sharehistory
 setopt incappendhistory
 
 # antigen (https://github.com/zsh-users/antigen)
-if [[ -z "/usr/local/share/antigen" ]]; then
+if [[ -e "/usr/local/share/antigen/antigen.zsh" ]]; then
     [[ "$XTRACE" == "verbose" ]] && printf "\nRunning export ANTIGEN_HOME=/usr/local/share/antigen ..."
     export ANTIGEN_HOME="/usr/local/share/antigen"
     else
