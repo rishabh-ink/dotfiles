@@ -17,16 +17,9 @@ setopt sharehistory
 setopt incappendhistory
 
 # antigen (https://github.com/zsh-users/antigen)
-if [[ -z "/usr/local/share/antigen"]]; then
+if [[ -z "$ANTIGEN_HOME" ]]; then
     [[ "$XTRACE" == "verbose" ]] && printf "\nRunning export ANTIGEN_HOME=/usr/local/share/antigen ..."
     export ANTIGEN_HOME="/usr/local/share/antigen"
-    else
-        if [[ -z "$HOME/lib/antigen" ]]; then
-            [[ "$XTRACE" == "verbose" ]] && printf "\nRunning export ANTIGEN_HOME=$HOME/lib/antigen ..."
-            export ANTIGEN_HOME="$HOME/lib/antigen"
-        else
-            printf "Please install Antigen (http://antigen.sharats.me/) to either /usr/local/share/antigen or $HOME/lib/antigen"
-        fi
 fi
 
 if [[ -e "$ANTIGEN_HOME/antigen.zsh" ]]; then
@@ -101,8 +94,6 @@ if [[ -e "$ANTIGEN_HOME/antigen.zsh" ]]; then
     antigen theme romkatv/powerlevel10k
 
     antigen apply
-else
-    printf "Please install Antigen from http://antigen.sharats.me/"
 fi
 
 # Git aliases (override/add oh-my-zsh plugins/git)
