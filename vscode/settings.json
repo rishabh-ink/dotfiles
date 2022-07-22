@@ -7,19 +7,25 @@
     "editor.cursorBlinking": "phase",
     "editor.cursorWidth": 3,
     "editor.dragAndDrop": false,
+    // "editor.fontFamily": "FantasqueSansMono-Regular",
+    "editor.letterSpacing": -1,
     "editor.fontFamily": "InputMonoCondensed-Medium",
-    // "editor.fontFamily": "mplusNerdFontCompleteM-medium",
+    // "editor.fontFamily": "Lotion-Regular",
+    // "editor.fontFamily": "VictorMonoNerdFontComplete-Bold",
+    // "editor.fontFamily": "ComicShanns-Regular",
+    // "editor.fontFamily": "Dossier-Regular",
+    // "editor.fontFamily": "mplusNerdFontCompleteM-regular",
     // // "editor.fontFamily": "monaco",
     // "editor.fontFamily": "FixedsysExcelsiorIIIb",
     // "editor.fontFamily": "JetBrainsMonoNerdFontCompleteM-Bold",
     // "editor.fontFamily": "JetBrainsMonoMediumNerdFontCompleteM-Medium",
     // "editor.fontFamily": "IosevkaNerdFontCompleteM-",
-    "editor.fontLigatures": false,
-    "terminal.integrated.fontSize": 12,
+    "editor.fontLigatures": true,
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.fontFamily": "mplusNerdFontCompleteM-regular",
     "editor.minimap.renderCharacters": false,
     "editor.minimap.showSlider": "always",
     "editor.multiCursorModifier": "ctrlCmd",
-    "editor.renderWhitespace": "all",
     "editor.rulers": [
         120,
     ],
@@ -34,23 +40,27 @@
     "explorer.openEditors.visible": 0,
     "files.exclude": {
         "**/*.egg-info": true,
+        "**/*.yarn": true,
+        "**/*flow-typed": true,
         "**/*.pyc": true,
         "**/.DS_Store": true,
         "**/.eggs": true,
         "**/.git": false,
         "**/.hg": true,
         "**/.svn": true,
-        "**/.tox": true,
+        "**/.tox": false,
         "**/build": false,
         "**/CVS": true,
         "**/dist": false,
-        "**/node_modules": true,
-        "**/templates/*.py": true,
+        "**/node_modules": false,
+        "**/templates/*.py": false,
+        "**/*.test.js.snap": true,
         "**/venv*": true,
         "**/virtualenv_run": true,
         "**/bazel*/**": true,
-        "**/*cache*": true,
+        "**/*cache*": false,
         "**/lib/**": false,
+        "**/*.js.flow": true,
         "**/.netlify/**": true,
         "**/.next/**": true,
         "**/.vscode/**": true,
@@ -66,7 +76,6 @@
     "python.linting.flake8Path": "./virtualenv_run/bin/flake8",
     "python.linting.pylintEnabled": false,
     "window.title": "${dirty} ${activeEditorLong}",
-    "workbench.activityBar.visible": false,
     "workbench.colorTheme": "Material Theme Palenight High Contrast",
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
@@ -84,7 +93,7 @@
     "materialTheme.accent": "Orange",
     "eslint.format.enable": true,
     "[javascript]": {
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "gitlens.views.lineHistory.location": "scm",
     "gitlens.currentLine.enabled": false,
@@ -108,12 +117,30 @@
     "[typescriptreact]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
-    "editor.fontSize": 14,
     "workbench.fontAliasing": "antialiased",
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.renderWhitespace": "none",
+    "workbench.editor.untitled.hint": "hidden",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "editor.fontSize": 14,
+    "security.workspace.trust.untrustedFiles": "open",
+    "diffEditor.renderSideBySide": false,
+    "github-enterprise.uri": "https://github.yelpcorp.com",
+    "flow.useBundledFlow": false,
+    "editor.largeFileOptimizations": false,
+    "window.zoomLevel": 1,
 }
