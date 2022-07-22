@@ -30,3 +30,5 @@
 
 [diff-so-fancy]
     stripLeadingSymbols = true
+[init]
+	defaultBranch = main
