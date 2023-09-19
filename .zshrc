@@ -16,6 +16,13 @@ setopt appendhistory
 setopt sharehistory
 setopt incappendhistory
 
+# Pyenv (https://github.com/pyenv/pyenv#installation)
+if [[ -d "$HOME/.pyenv" ]]; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
+fi
+
 # antigen (https://github.com/zsh-users/antigen)
 if [[ -z "$ANTIGEN_HOME" ]]; then
     [[ "$XTRACE" == "verbose" ]] && printf "\nRunning export ANTIGEN_HOME=/usr/local/share/antigen ..."
