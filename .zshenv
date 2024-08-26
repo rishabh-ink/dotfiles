@@ -48,3 +48,8 @@ if [[ -d "$HOME/.npm-prefix" ]]; then
     [[ "$XTRACE" == "verbose" ]] && printf "\nAdding $HOME/.npm-prefix/bin to path ..."
     path=("$HOME/.npm-prefix/bin" $path)
 fi
+
+# Add Homebrew to path
+if [[ -d "/opt/homebrew/bin" ]]; then
+    path=("/opt/homebrew/bin" $path)
+fi
