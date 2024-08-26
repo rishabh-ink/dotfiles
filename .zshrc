@@ -25,8 +25,8 @@ fi
 
 # antigen (https://github.com/zsh-users/antigen)
 if [[ -z "$ANTIGEN_HOME" ]]; then
-    [[ "$XTRACE" == "verbose" ]] && printf "\nRunning export ANTIGEN_HOME=/usr/local/share/antigen ..."
-    export ANTIGEN_HOME="/usr/local/share/antigen"
+    [[ "$XTRACE" == "verbose" ]] && printf "\nRunning export ANTIGEN_HOME=/opt/homebrew/share/antigen ..."
+    export ANTIGEN_HOME="/opt/homebrew/share/antigen"
 fi
 
 if [[ -e "$ANTIGEN_HOME/antigen.zsh" ]]; then
