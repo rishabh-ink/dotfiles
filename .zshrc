@@ -108,32 +108,7 @@ alias gs="gsb"
 alias gds="gdca"
 alias gg="git grep --ignore-case --line-number"
 if type tig > /dev/null; then
-        alias gl="tig --all"
-    else
-        unalias gl # Unalias oh-my-zsh’s plugins/git’s gl alias
-        function gl() {
-            # https://junegunn.kr/2015/03/browsing-git-commits-with-fzf/
-            # https://gist.github.com/junegunn/f4fca918e937e6bf5bad
-            # https://gist.github.com/akatrevorjay/9fc061e8371529c4007689a696d33c62
-            # https://asciinema.org/a/101366
-            git log \
-            --abbrev-commit \
-            --all \
-            --color=always \
-            --date=iso8601 \
-            --graph \
-            --pretty='%C(cyan)%h %C(red)%d %C(blue)%s %C(white)on %C(magenta)%cd %C(white)by %C(yellow)%ce%Creset' \
-            "$@" | \
-
-            fzf \
-            --ansi \
-            --no-mouse \
-            --reverse \
-            --tiebreak=index \
-            --no-sort \
-            --bind=ctrl-s:toggle-sort \
-            # --preview 'f() { set -- $(echo -- "$@" | grep -o "[a-f0-9]\{7\}"); [ $# -eq 0 ] || git show --color=always $1; }; f {}'
-        }
+    alias gl="tig --all"
 fi
 
 # https://github.com/sindresorhus/guides/blob/master/how-not-to-rm-yourself.md
