@@ -1,3 +1,7 @@
+# References:
+# 1. https://zsh.sourceforge.net/Doc/Release/Conditional-Expressions.html
+# 2. https://robots.thoughtbot.com/the-unix-shells-humble-if
+
 # Locale (https://help.ubuntu.com/community/Locale#List_current_settings)
 export LANG="en_US.UTF-8"
 
