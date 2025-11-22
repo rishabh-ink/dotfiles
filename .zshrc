@@ -32,90 +32,37 @@ if [[ -d "$HOME/.pyenv" ]]; then
     eval "$(pyenv init -)"
 fi
 
+# https://ohmyposh.dev/
+eval "$(oh-my-posh init zsh --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/tags/v27.6.0/themes/gmay.omp.json)"
+
 # antigen (https://github.com/zsh-users/antigen)
 if [[ -z "$ANTIGEN_HOME" ]]; then
-    [[ "$XTRACE" == "verbose" ]] && printf "\nRunning export ANTIGEN_HOME=/opt/homebrew/share/antigen ..."
     export ANTIGEN_HOME="/opt/homebrew/share/antigen"
 fi
 
 if [[ -e "$ANTIGEN_HOME/antigen.zsh" ]]; then
-    [[ "$XTRACE" == "verbose" ]] && printf "\nRunning source \$ANTIGEN_HOME/antigen.zsh ..."
     source "$ANTIGEN_HOME/antigen.zsh"
 
     # Enable antigen logging
     # https://github.com/zsh-users/antigen/wiki/Configuration#general
     # ANTIGEN_LOG=$ANTIGEN_HOME/antigen.log
 
-    antigen use oh-my-zsh # http://ohmyz.sh
-
     if [[ $OSTYPE == *darwin* ]]; then
         antigen bundle https://github.com/robbyrussell/oh-my-zsh plugins/osx
     fi
 
-    antigen bundle https://github.com/robbyrussell/oh-my-zsh plugins/git
-    antigen bundle https://github.com/robbyrussell/oh-my-zsh plugins/emoji-clock
-    antigen bundle https://github.com/robbyrussell/oh-my-zsh plugins/command-not-found
     antigen bundle https://github.com/zsh-users/zsh-syntax-highlighting zsh-syntax-highlighting.plugin.zsh
     antigen bundle https://github.com/tysonwolker/iterm-tab-colors zsh-tab-colors.plugin.zsh
     antigen bundle https://github.com/rupa/z z.sh
     antigen bundle https://github.com/zsh-users/zsh-autosuggestions zsh-autosuggestions.plugin.zsh
 
-    DEFAULT_USER=$USER
-    POWERLEVEL9K_ALWAYS_SHOW_USER=false
-    POWERLEVEL9K_MODE="nerdfont-complete"
-    POWERLEVEL9K_VCS_HIDE_TAGS=true
-    POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context status date time_joined virtualenv node_version dir_writable dir vcs newline)
-    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
-
-    POWERLEVEL9K_OS_ICON_BACKGROUND="black"
-    POWERLEVEL9K_OS_ICON_FOREGROUND="white"
-    POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND="black"
-    POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="white"
-    POWERLEVEL9K_CONTEXT_REMOTE_BACKGROUND="red"
-    POWERLEVEL9K_CONTEXT_REMOTE_FOREGROUND="black"
-    POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND="red"
-    POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND="black"
-    POWERLEVEL9K_CONTEXT_SUDO_BACKGROUND="red"
-    POWERLEVEL9K_CONTEXT_SUDO_FOREGROUND="black"
-    POWERLEVEL9K_CONTEXT_REMOTE_SUDO_BACKGROUND="red"
-    POWERLEVEL9K_CONTEXT_REMOTE_SUDO_FOREGROUND="black"
-    POWERLEVEL9K_STATUS_OK_BACKGROUND="black"
-    POWERLEVEL9K_STATUS_OK_FOREGROUND="green"
-    POWERLEVEL9K_STATUS_ERROR_BACKGROUND="red"
-    POWERLEVEL9K_STATUS_ERROR_FOREGROUND="black"
-    POWERLEVEL9K_DATE_BACKGROUND="blue"
-    POWERLEVEL9K_DATE_FOREGROUND="black"
-    POWERLEVEL9K_TIME_BACKGROUND="blue"
-    POWERLEVEL9K_TIME_FOREGROUND="black"
-    POWERLEVEL9K_VIRTUALENV_BACKGROUND="cyan"
-    POWERLEVEL9K_VIRTUALENV_FOREGROUND="black"
-    POWERLEVEL9K_VCS_CLEAN_BACKGROUND="green"
-    POWERLEVEL9K_VCS_CLEAN_FOREGROUND="black"
-    POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND="yellow"
-    POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND="black"
-    POWERLEVEL9K_VCS_MODIFIED_BACKGROUND="yellow"
-    POWERLEVEL9K_VCS_MODIFIED_FOREGROUND="black"
-    POWERLEVEL9K_NODE_VERSION_BACKGROUND="green"
-    POWERLEVEL9K_NODE_VERSION_FOREGROUND="black"
-    POWERLEVEL9K_DIR_DEFAULT_BACKGROUND="magenta"
-    POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="black"
-    POWERLEVEL9K_DIR_HOME_BACKGROUND="magenta"
-    POWERLEVEL9K_DIR_HOME_FOREGROUND="black"
-    POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND="magenta"
-    POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="black"
-    POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_BACKGROUND="black"
-    POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_FOREGROUND="red"
-
-    # https://github.com/romkatv/powerlevel10k#antigen
-    antigen theme romkatv/powerlevel10k
-
     antigen apply
 fi
 
-# Git aliases (override/add oh-my-zsh plugins/git)
-alias gs="gsb"
-alias gds="gdca"
-alias gg="git grep --ignore-case --line-number"
+# Personal Git aliases
+alias gs="git diff --stat && git status --short --branch"
+alias gds="git diff --staged"
+
 if type tig > /dev/null; then
     alias gl="tig --all"
 fi
