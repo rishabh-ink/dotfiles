@@ -114,11 +114,10 @@ fi
 
 # Work
 if [[ -e "$HOME/.zshrc_work" ]]; then
-    [[ "$XTRACE" == "verbose" ]] && printf "\nRunning source $HOME/.zshrc_work ..."
     source "$HOME/.zshrc_work"
 fi
 
-# References
-# http://zsh.sourceforge.net/Doc/Release/Conditional-Expressions.html
-# https://robots.thoughtbot.com/the-unix-shells-humble-if
-test -e /Users/rishabh/.iterm2_shell_integration.zsh && source /Users/rishabh/.iterm2_shell_integration.zsh || true
+# https://iterm2.com/documentation-shell-integration.html
+if [[ -e "$HOME/.iterm2_shell_integration.zsh" ]]; then
+    source $HOME/.iterm2_shell_integration.zsh
+fi
