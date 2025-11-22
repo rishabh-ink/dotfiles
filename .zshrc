@@ -105,11 +105,6 @@ if type eza > /dev/null; then
     alias ll="la"
 fi
 
-# https://travis-ci.com
-if [[ -e "$HOME/.travis/travis.sh" ]]; then
-    source $HOME/.travis/travis.sh
-fi
-
 # https://github.com/nvm-sh/nvm
 if [[ $OSTYPE == *darwin* ]]; then
     export NVM_DIR="$HOME/.nvm"
