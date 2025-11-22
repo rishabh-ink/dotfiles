@@ -99,9 +99,9 @@ if type rbenv > /dev/null; then
     eval "$(rbenv init -)"
 fi
 
-# https://the.exa.website
-if type exa > /dev/null; then
-    alias la="exa --all --blocks --git --group --group-directories-first --header --inode --links --long"
+# https://github.com/eza-community/eza
+if type eza > /dev/null; then
+    alias la="eza --all --git --group --group-directories-first --header --inode --links --long"
     alias ll="la"
 fi
 
