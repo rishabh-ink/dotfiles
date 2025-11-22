@@ -20,6 +20,11 @@ setopt appendhistory
 setopt sharehistory
 setopt incappendhistory
 
+# Add `python`, etc. aliases on macOS
+if [[ $OSTYPE == *darwin* ]]; then
+    export PATH="/opt/homebrew/opt/python/libexec/bin":$PATH
+fi
+
 # Pyenv (https://github.com/pyenv/pyenv#installation)
 if [[ -d "$HOME/.pyenv" ]]; then
     export PYENV_ROOT="$HOME/.pyenv"
