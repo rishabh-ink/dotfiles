@@ -89,10 +89,9 @@ if type pygmentize > /dev/null; then
         alias ccat="cat --number $@"
 fi
 
-# https://github.com/junegunn/fzf
-if [[ -d "$HOME/lib/fzf" ]]; then
-    source "$HOME/lib/fzf/shell/completion.zsh"
-    source "$HOME/lib/fzf/shell/key-bindings.zsh"
+# https://github.com/junegunn/fzf?tab=readme-ov-file#setting-up-shell-integration
+if type fzf > /dev/null; then
+    source <(fzf --zsh)
 fi
 
 # https://github.com/rbenv/rbenv
