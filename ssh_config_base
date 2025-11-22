@@ -1,11 +1,11 @@
 # See https://linux.die.net/man/5/ssh_config
+# See https://superuser.com/questions/247564/is-there-a-way-for-one-ssh-config-file-to-include-another-one
 
 Host *
     # See https://apple.stackexchange.com/questions/48502/how-can-i-permanently-add-my-ssh-private-key-to-keychain-so-it-is-automatically
     UseKeychain yes
     AddKeysToAgent yes
     Compression yes
-    # See https://developer.1password.com/docs/ssh/get-started/#step-4-configure-your-ssh-or-git-client
     ForwardAgent yes
-    IdentityAgent ~/.1password/agent.sock
-
+    # See https://developer.1password.com/docs/ssh/get-started/#step-4-configure-your-ssh-or-git-client
+    IdentityAgent "~/.1password/agent.sock"
