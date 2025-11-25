@@ -59,8 +59,13 @@ if [[ -e "$ANTIGEN_HOME/antigen.zsh" ]]; then
     antigen apply
 fi
 
+# https://github.com/rec/gitz
+if [[ -d "$HOME/lib/gitz" ]]; then
+    alias gs="$HOME/lib/gitz/git-st"
+    alias gw="$HOME/lib/gitz/git-when"
+fi
+
 # Personal Git aliases
-alias gs="git diff --stat && git status --short --branch"
 alias gds="git diff --staged"
 
 if type tig > /dev/null; then

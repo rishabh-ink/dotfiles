@@ -47,3 +47,7 @@ if [[ $OSTYPE == *darwin* ]]; then
         slack \
         visual-studio-code
 fi
+
+# https://github.com/rec/gitz
+mkdir $HOME/lib
+git clone https://github.com/rec/gitz.git $HOME/lib
