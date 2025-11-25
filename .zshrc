@@ -69,7 +69,8 @@ fi
 alias gds="git diff --staged"
 
 if type tig > /dev/null; then
-    alias gl="tig --all"
+    alias gl="tig --first-parent"
+    alias gll="tig --all"
 fi
 
 # https://github.com/sindresorhus/guides/blob/master/how-not-to-rm-yourself.md
