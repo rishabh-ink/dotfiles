@@ -66,7 +66,9 @@ if [[ -d "$HOME/lib/gitz" ]]; then
 fi
 
 # Personal Git aliases
+alias gd="git diff"
 alias gds="git diff --staged"
+alias gco="git checkout"
 
 if type tig > /dev/null; then
     alias gl="tig --first-parent"
