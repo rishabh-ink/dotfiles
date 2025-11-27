@@ -33,7 +33,7 @@ if [[ -d "$HOME/.pyenv" ]]; then
 fi
 
 # https://ohmyposh.dev/
-eval "$(oh-my-posh init zsh --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/tags/v27.6.0/themes/gmay.omp.json)"
+eval "$(oh-my-posh init zsh --config $HOME/dotfiles/oh-my-posh-theme.json)"
 
 # antigen (https://github.com/zsh-users/antigen)
 if [[ -z "$ANTIGEN_HOME" ]]; then
