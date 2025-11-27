@@ -69,6 +69,7 @@ fi
 alias gd="git diff"
 alias gds="git diff --staged"
 alias gco="git checkout"
+alias gpr="git pull --rebase origin HEAD"
 
 if type tig > /dev/null; then
     alias gl="tig --first-parent"
