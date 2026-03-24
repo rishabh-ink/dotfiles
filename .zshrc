@@ -70,6 +70,7 @@ alias gd="git diff"
 alias gds="git diff --staged"
 alias gco="git checkout"
 alias gpr="git pull --rebase origin HEAD"
+alias gba="git branch --all --sort=creatordate --color=always --format \"%(color:green)%(creatordate:short) %(creatordate:format:%H:%M:%S)%(color:reset) %(color:yellow)%(committeremail)%(color:reset) %(color:magenta)%(objectname:short)%(color:reset) %(color:blue)%(refname:lstrip=-1)%(color:reset) %(contents:subject)\""
 
 if type tig > /dev/null; then
     alias gl="tig --first-parent"

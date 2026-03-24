@@ -24,11 +24,12 @@ ln -sf $HOME/dotfiles/.config/starship.toml $HOME/.config/starship.toml
 # macOS
 if [[ $OSTYPE == *darwin* ]]; then
     # Preferences
-    defaults -currentHost write -globalDomain com.apple.finder AppleShowAllFiles -boolean true
-    defaults -currentHost write -globalDomain InitialKeyRepeat -float 15.0
-    defaults -currentHost write -globalDomain KeyRepeat -float 2.0
-    defaults -currentHost write -globalDomain ApplePressAndHoldEnabled -bool false
-    defaults -currentHost write -globalDomain com.apple.mouse.tapBehavior -int 0
+    defaults write com.apple.finder AppleShowAllFiles -boolean true
+    defaults write InitialKeyRepeat -float 15.0
+    defaults write KeyRepeat -float 2.0
+    defaults write ApplePressAndHoldEnabled -bool false
+    defaults write com.apple.mouse.tapBehavior -int 0
+    defaults com.apple.screencapture type jpg
 
     # Utilities
     brew install \

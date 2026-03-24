@@ -43,6 +43,11 @@ if [[ -d "$HOME/bin" ]]; then
     path=("$HOME/bin" $path)
 fi
 
+# Add $HOME/.local/bin to the path
+if [[ -d "$HOME/.local/bin" ]]; then
+    path=("$HOME/.local/bin" $path)
+fi
+
 # Add npm_config_prefix to the path
 if [[ -d "$HOME/.npm-prefix" ]]; then
     [[ "$XTRACE" == "verbose" ]] && printf "\nAdding $HOME/.npm-prefix/bin to path ..."
@@ -62,4 +67,9 @@ if [[ -d "/opt/homebrew/opt/openjdk" ]]; then
     export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
     # For compilers to find openjdk you may need to set:
     export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+fi
+
+# Android SDK platform-tools
+if [[ -d "$HOME/Library/Android/sdk/platform-tools" ]]; then
+    path=("$HOME/Library/Android/sdk/platform-tools" $path)
 fi
