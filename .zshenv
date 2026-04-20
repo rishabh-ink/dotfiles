@@ -73,3 +73,8 @@ fi
 if [[ -d "$HOME/Library/Android/sdk/platform-tools" ]]; then
     path=("$HOME/Library/Android/sdk/platform-tools" $path)
 fi
+
+# Python alias
+if type python3 > /dev/null && ! type python > /dev/null 2>&1; then
+    alias python=python3
+fi
