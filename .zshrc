@@ -71,6 +71,7 @@ alias gds="git diff --staged"
 alias gco="git checkout"
 alias gpr="git pull --rebase origin HEAD"
 alias gba="git branch --all --sort=creatordate --color=always --format \"%(color:green)%(creatordate:short) %(creatordate:format:%H:%M:%S)%(color:reset) %(color:yellow)%(committeremail)%(color:reset) %(color:magenta)%(objectname:short)%(color:reset) %(color:blue)%(refname:lstrip=-1)%(color:reset) %(contents:subject)\""
+alias gb="git branch --sort=-committerdate --color=always --format='%(color:yellow)%(committerdate:short)%(color:reset) %(color:dim)%(committerdate:relative)%(color:reset) %(if)%(HEAD)%(then)%(color:bold cyan)%(refname:short)%(color:reset) *%(else)%(color:green)%(refname:short)%(end)%(color:reset)' | command grep -v 'master'"
 
 if type tig > /dev/null; then
     alias gl="tig --first-parent"
@@ -107,6 +108,12 @@ fi
 # https://github.com/rbenv/rbenv
 if type rbenv > /dev/null; then
     eval "$(rbenv init -)"
+fi
+
+# https://github.com/ogham/exa
+if type exa > /dev/null; then
+    alias la="exa --all --git --group --group-directories-first --header --inode --links --long"
+    alias ll="la"
 fi
 
 # https://github.com/eza-community/eza
