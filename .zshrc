@@ -112,7 +112,7 @@ fi
 
 # https://github.com/ogham/exa
 if type exa > /dev/null; then
-    alias la="exa --all --git --group --group-directories-first --header --inode --links --long"
+    alias la="exa --all --group --group-directories-first --header --inode --links --long"
     alias ll="la"
 fi
 
